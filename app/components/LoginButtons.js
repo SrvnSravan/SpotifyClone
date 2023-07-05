@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Pressable } from 'react-native'
+import { StyleSheet, Text, View, Pressable, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const LoginButtons = ({pressable}) => {
@@ -6,9 +6,9 @@ const LoginButtons = ({pressable}) => {
 
   return (
     <View>
-        <Pressable style={containerStyle}>
+        <TouchableOpacity style={containerStyle}>
             <Text>Sign In with Spotify</Text>
-        </Pressable>
+        </TouchableOpacity>
     </View>
   )
 }
