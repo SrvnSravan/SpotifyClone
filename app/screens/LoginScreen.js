@@ -1,23 +1,29 @@
 import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import LoginButtons from '../components/LoginButtons';
 
 const LoginScreen = () => {
   return (
-    <LinearGradient colors={["#040306", "#131624"]} style={{flex: 1}}>
+    <LinearGradient colors={['#040306', '#131624']} style={{flex: 1}}>
       <SafeAreaView>
-      <View style={{height: 80}} />
-      <View style={styles.logoContainer}>
-     <Image source={require("../assets/images/Spotify.png")}
-     style={styles.logo}/>
-     </View>
-      <Text style={styles.text}>Millions of Songs Free on Spotify!</Text>
-      <LoginButtons />
-      <LoginButtons pressable={false}/>
-      <LoginButtons pressable={false}/>
-      <LoginButtons pressable={false}/>
+        <View style={{height: 80}} />
+        <View style={styles.logoContainer}>
+          <Image
+            source={require('../assets/images/Spotify.png')}
+            style={styles.logo}
+          />
+        </View>
+        <Text style={styles.text}>Millions of Songs Free on Spotify!</Text>
+        <LoginButtons
+          title={'Sign in with Spotify'}
+          pressable={true}
+          buttonText={true}
+        />
+        <LoginButtons title={'Continue with phone number'} pressable={false} />
+        <LoginButtons title={'Continue with Google'} pressable={false} />
+        <LoginButtons title={'Sign in with Facebook'} pressable={false} />
       </SafeAreaView>
     </LinearGradient>
   );
@@ -25,24 +31,23 @@ const LoginScreen = () => {
 
 export default LoginScreen;
 
- const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   logo: {
-    height: 80, 
+    height: 80,
     width: 80,
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   logoContainer: {
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   text: {
-    color: "white",
+    color: 'white',
     fontSize: 40,
-    fontWeight: "bold",
-    textAlign: "center",
+    fontWeight: 'bold',
+    textAlign: 'center',
     marginTop: 40,
-    marginBottom: 80
-    }
-
- });
+    marginBottom: 80,
+  },
+});
