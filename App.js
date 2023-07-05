@@ -5,9 +5,7 @@ import LoginScreen from './app/screens/LoginScreen';
 
 const App = () => {
   return (
-    <View>
-      <LoginScreen />
-    </View>
+      <Navigation />
   );
 };
 
