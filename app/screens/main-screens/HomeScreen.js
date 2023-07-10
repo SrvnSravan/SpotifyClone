@@ -2,6 +2,7 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import AnimatedButton from '../../components/AnimatedButton';
 
 const HomeScreen = () => {
   return (
@@ -9,6 +10,7 @@ const HomeScreen = () => {
       <SafeAreaView>
       <View>
       <Text>Hello</Text>
+      <AnimatedButton  name={"Music"}/>
       </View>
       </SafeAreaView>
     </LinearGradient>
