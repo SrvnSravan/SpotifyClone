@@ -5,32 +5,16 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView>
-      <View style={{flexDirection: 'row', padding: 5}}>
-        <Image
-          source={require('../../assets/images/th.jpg')}
-          style={styles.logo}
-        />
-        <Text style={styles.textContainer}>Good Morning</Text>
+    <LinearGradient colors={['#040306', '#131624']} style={{flex: 1}}>
+      <SafeAreaView>
+      <View>
+      <Text>Hello</Text>
       </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </LinearGradient>
   );
 };
 
 export default HomeScreen;
 
-const styles = StyleSheet.create({
-  logo: {
-    height: 40,
-    width: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 20,
-  },
-  textContainer: {
-    flex: 1,
-    fontSize: 20,
-    fontWeight: 'bold',
-    padding: 5,
-  },
-});
+const styles = StyleSheet.create({})
